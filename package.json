@@ -1,0 +1,52 @@
+{
+  "name": "git-toolkit",
+  "version": "0.0.1",
+  "description": "Replaces npm link with something that actually works!",
+  "scripts": {
+    "pretty": "prettier --config ./.prettierrc.json --write \"src/**/*.js\""
+  },
+  "bin": {
+    "git-toolkit": "./bin/cli.js"
+  },
+  "author": "nomi9995 <muhammadnuman70@gmail.com> (http://www.github.com/nomi9995)",
+  "license": "MIT",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomi9995/git-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nomi9995/git-toolkit/issues"
+  },
+  "homepage": "https://github.com/nomi9995/git-toolkit#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^5.1.0",
+    "esm": "^3.2.25",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.2.0",
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^4.18.2",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty && git add ."
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "symlink",
+    "symboliclink",
+    "symlinks",
+    "copy",
+    "watcher",
+    "tangible",
+    "tangible symlink"
+  ]
+}
